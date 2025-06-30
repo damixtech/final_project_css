@@ -1,0 +1,17 @@
+//ABOUT - HERO
+
+@use '../../abstracts/mixins' as mx;
+
+section.hero {
+    padding: 0 16px;
+    margin-bottom: 50px;
+    figure {
+        margin: 0;
+        text-align: center;
+        img {
+            max-width: 100%;
+            width: 300pxpx;
+        }
+    }
+    
+}

@@ -1,0 +1,95 @@
+//HOME COURSES
+
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/variables' as v;
+@use '../components/button' as btn;
+
+section.home-courses {
+    margin-bottom: 50px;
+    .container {
+        padding: 0px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        h2 {
+            font-size: 32px;
+            margin: 0;
+        }
+        .course__content {
+            article {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                padding: 20px 10px;
+                border-radius: 16px;
+                box-shadow: 5px 5px 10px black;
+                background-color: rgb(241, 241, 241);
+                figure {
+                    margin: 0;
+                }
+                h3 {
+                    margin: 0;
+                    text-align: center;
+                    a {
+                        @include mx.reset-a()
+                    }
+                }
+                p {
+                    margin: 0;
+                    text-align: center;
+                    a {
+                        @include btn.standard();
+                        box-shadow: 2px 2px 3px black;
+                        &:hover {
+                            @include btn.standard-hover();
+                        }
+                    }
+                }  
+            }
+        }
+        p {
+            a {
+                @include btn.standard();
+                &:hover {
+                    @include btn.standard-hover();
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            width: 50px;
+        }
+        @include mx.breakpoint(tablet) {
+            padding: 0 20px;
+            .course__content {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: stretch;
+                article {
+                    max-width: 40%;
+                    &:first-child {
+                        figure {
+                            img {
+                                width: 150px;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        figure {
+                            img {
+                                width: 110px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mx.breakpoint(tablet) {
+        margin-bottom: 100px;
+    }
+    
+}

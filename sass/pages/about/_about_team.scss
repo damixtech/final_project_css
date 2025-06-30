@@ -1,0 +1,58 @@
+//ABOUT -- TEAM
+
+@use '../../abstracts/mixins' as mx;
+
+
+section.team {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+    color: white;
+    h2 {
+        margin: 0;
+        font-size: 32px;
+    }
+    .photos {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                max-width: 100%;
+            }
+            h2, p {
+                margin: 0;
+            }
+            &:last-child {
+                img {
+                    padding: 20px 0;
+                }
+            }
+        }
+
+    }
+    .team-desktop {
+        display: none;
+    }
+    .team__content {
+        text-align: center;
+    }
+    @include mx.breakpoint(tablet) {
+        padding: 0 20px;
+        .photos {
+            display: none;
+        }
+        .team-desktop {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            filter: drop-shadow(2px 2px 3px white);
+        }
+    }
+}

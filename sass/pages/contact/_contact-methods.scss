@@ -1,0 +1,39 @@
+//CONTACT METHODS
+
+@use '../../abstracts/mixins' as mx;
+
+
+section.methods {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 50px;
+    .methods__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        article {
+            padding: 15px 15px;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px black;
+            background-color: rgb(241, 241, 241);
+        }
+    }
+    .arrow {
+        max-width: 100%;
+        width: 50px;
+    }
+    @include mx.breakpoint(tablet) {
+        padding: 0 20px;
+        margin-bottom: 100px;
+        .methods__content {
+            flex-direction: row;
+            article {
+                width: 50%;
+            }
+        }
+    }
+
+}

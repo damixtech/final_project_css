@@ -1,0 +1,88 @@
+//BLOG - NEWS
+@use '../../components/button' as btn;
+@use '../../abstracts/variables' as v;
+@use '../../abstracts/mixins' as mx;
+
+
+section.news {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 50px;
+    h1 {
+        margin: 0;
+    }
+    .news__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 10px;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px black;
+            background-color: rgb(241, 241, 241);
+            h3, p {
+                margin: 0;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            figure {
+                margin: 0;
+                img {
+                max-width: 100%;
+                }
+            }
+            p {
+                a {
+                    @include btn.standard();
+                    box-shadow: 3px 3px 5px v.$primary_color;
+                    &:hover {
+                        @include btn.standard-hover();
+                    }
+                }
+            }
+        }
+    }
+    @include mx.breakpoint(tablet) {
+        padding: 0 20px;
+        .news__content {
+            flex-direction: row;
+            article {
+                width: 50%;
+                &:last-child {
+                    figure {
+                        img {
+                            height: 280px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mx.breakpoint(desktop) {
+        .news__content {
+            justify-content: center;
+            article {
+                width: 40%;
+                figure {
+                    img {
+                        width: 100%;
+                    }
+                }
+                &:last-child {
+                    figure {
+                        img {
+                            height: 390px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

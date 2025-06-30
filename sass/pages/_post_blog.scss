@@ -1,0 +1,30 @@
+// POSTS BLOG
+
+@use '../abstracts/mixins' as mx;
+
+section.post {
+    padding: 0 16px;
+    figure {
+        margin: 0;
+        img {
+            max-width: 100%;
+        }
+    }
+    @include mx.breakpoint(tablet) {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 50px;
+        h1, p {
+            margin: 0;
+        }
+        figure {
+            img {
+                width: 500px;
+            }
+        }
+    }
+
+}

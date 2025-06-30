@@ -1,0 +1,73 @@
+//LATESTS POSTS
+
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/variables' as v;
+@use '../components/button' as btn;
+
+section.latest-posts {
+    margin-bottom: 50px;
+    .container {
+        padding: 0 16px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        h2 {
+            margin: 0;
+            font-size: 32px;
+        }
+        .post__content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            article {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                border-radius: 16px;
+                padding: 10px 10px;
+                box-shadow: 3px 3px 10px rgb(170, 170, 170);
+                figure {
+                    margin: 0;
+                }
+                h3 {
+                    margin: 0;
+                    a {
+                        @include mx.reset-a();
+                        color: white;
+                    }
+                }
+                p {
+                    margin: 0;
+                }
+        
+            }
+        }
+        p {
+            margin: 0;
+            a {
+                @include btn.standard();
+                &:hover {
+                    @include btn.standard-hover();
+                }
+
+            }
+        }
+        @include mx.breakpoint(tablet) {
+            padding: 0 20px;
+            .post__content {
+                flex-direction: row;
+                align-items: stretch;
+                justify-content: center;
+                article {
+                    max-width: 40%;
+                }
+            }
+        }
+    }
+    
+    
+
+}

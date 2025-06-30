@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/variables' as v;
+@use '../components/button' as btn;
+
+
+header {
+    padding: 0px 16px;
+    margin-bottom: 50px;
+    .container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding-top: 20px;
+        figure {
+            margin: 0;
+            font-size: 0;
+            img {
+                max-width: 100%;
+                width: 170px;
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                gap: 20px 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+                @include mx.reset-nav-ul();
+                a {
+                    @include btn.standard();
+                    &:hover {
+                        @include btn.standard-hover();
+                    }
+                }
+            }
+        }
+    }
+    @include mx.breakpoint(tablet) {
+        padding: 0px 20px;
+        .container {
+            flex-direction: row;
+            gap: 0;
+            justify-content: space-between;
+            padding-top: 30px;
+            figure {
+                img {
+                    width: 200px;
+                }
+            }
+            nav {
+                ul {
+                    gap: 10px;
+                    a {
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+    @include mx.breakpoint(desktop) {
+        margin-bottom: 100px;
+        .container {
+            figure {
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    
+}

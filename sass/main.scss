@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// 1. Vendors
+@use './vendors/normalize';
+
+// 2. Layout
+@use './layout/body';
+@use './layout/footer';
+@use './layout/header';
+@use './layout/hero';
+@use './layout/about-us';
+@use './layout/home_courses';
+@use './layout/latest-posts';
+@use './layout/page';
+
+
+// 3. Components
+@use './components/button';
+
+// 4. Pages
+@use './pages/home';
+@use './pages/about';
+@use './pages/courses';
+@use './pages/blog';
+@use './pages/registro';
+@use './pages/login';
+@use './pages/contact';
+@use './pages/post_blog';
+@use './pages/course';
+@use './pages/aviso_legal';
+
+// 5. Abstract
+@use './abstracts/index';

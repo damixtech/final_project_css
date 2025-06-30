@@ -1,0 +1,58 @@
+//LOGIN - FORM
+
+@use '../../abstracts/variables' as v;
+@use '../../abstracts/mixins' as mx;
+
+
+section.login-form {
+    padding: 0 16px;
+    margin-bottom: 50px;
+    h1 {
+        margin: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .inputs {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            label {
+                display: block;
+            }
+            input {
+                border-radius: 10px;
+                background-color: v.$primary_color;
+                border: none;
+            }
+        }
+        .buttons {
+            button {
+                padding: 8px 16px;
+                border-radius: 16px;
+                border: none;
+                color: v.$primary_color;
+                &:hover {
+                    color: white;
+                    background-color: v.$primary_color;
+                }
+            }
+        }
+        
+    }
+    @include mx.breakpoint(tablet) {
+        padding: 0 20px;
+        form {
+            align-items: center;
+            .inputs {
+                width: 40%;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

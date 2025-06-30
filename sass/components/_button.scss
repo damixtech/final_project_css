@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/variables' as v;
+
+@mixin standard {
+    text-decoration: none;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    color: v.$primary_color;
+}
+
+@mixin standard-hover {
+    background-color: v.$primary_color;
+    color: white;
+}

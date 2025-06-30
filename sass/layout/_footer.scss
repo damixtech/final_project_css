@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+
+
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/variables' as v;
+@use '../components/button' as btn;
+
+footer.principal {
+    background-color: white;
+    padding: 50px 0;
+    width: 100%;
+    .container {
+        padding: 0px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        p {
+            margin: 0;
+            a {
+                @include mx.reset-a();
+                color: v.$primary_color;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+//ABOUT - MISION-VISION
+
+@use '../../abstracts/mixins' as mx;
+
+section.mision-vision {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    .mision-vision__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20 px;
+        article {
+            text-align: center;
+        }
+        
+    }
+    .arrow {
+        max-width: 100%;
+        width: 50px;
+    }
+    @include mx.breakpoint(tablet) {
+        padding: 0 20px;
+        margin-bottom: 100px;
+
+        .mision-vision__content {
+            flex-direction: row;
+            gap: 30px;
+            justify-content: center;
+            article {
+                 max-width: 40%;
+                 border-radius: 20px;
+                 background-color: white;
+            }
+        }
+    }
+}
