@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: "/final_project_css/",
+  base: process.env.NODE_ENV === 'production' ? '/final_project_css/' : '/',
   
   build: {
     outDir: 'dist', // Carpeta donde se generarán los archivos de producción
